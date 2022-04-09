@@ -2,5 +2,6 @@ part of 'counter_cubit.dart';
 
 class CounterInitial {
   int myCounter;
-  CounterInitial({required this.myCounter});
+  bool? isIncremented;
+  CounterInitial({required this.myCounter, this.isIncremented});
 }
