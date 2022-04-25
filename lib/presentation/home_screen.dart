@@ -87,25 +87,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.amber,
                 child: const Text('Second Screen'),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (mContext) => BlocProvider.value(
-                            value: BlocProvider.of<CounterCubit>(context),
-                            child: const SecondScreen(title: 'Second Screen'),
-                          )));
+                  Navigator.of(context).pushNamed('/second');
                 }),
             const SizedBox(
               height: 20,
             ),
-            // MaterialButton(
-            //     color: Colors.amber,
-            //     child: const Text('Third Screen'),
-            //     onPressed: () {
-            //       Navigator.of(context).push(MaterialPageRoute(
-            //           builder: (mContext) => BlocProvider.value(
-            //                 value: BlocProvider.of<CounterCubit>(context),
-            //                 child: const ThirdScreen(title: 'Third Screen'),
-            //               )));
-            //     })
+            MaterialButton(
+                color: Colors.amber,
+                child: const Text('Third Screen'),
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/third');
+                })
           ],
         ),
       ),

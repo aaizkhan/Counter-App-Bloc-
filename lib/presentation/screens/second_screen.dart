@@ -89,11 +89,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (mContext) => BlocProvider.value(
-                            value: BlocProvider.of<CounterCubit>(context),
-                            child: const ThirdScreen(title: 'Third Screen'),
-                          )));
+                  Navigator.of(context).pushNamed('/third');
                 })
           ],
         ),
